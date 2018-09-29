@@ -15,7 +15,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   # imagemagick package not available on win
   skip: true  # [win]
   rpaths:
@@ -78,3 +78,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
