@@ -44,7 +44,7 @@ requirements:
     - r-knitr
     - r-magrittr
     - imagemagick
-    - librsvg
+    - librsvg 2.44.*
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -53,7 +53,7 @@ requirements:
     - r-knitr
     - r-magrittr
     - imagemagick
-    - librsvg
+    - librsvg 2.44.*
 
 test:
   commands:
