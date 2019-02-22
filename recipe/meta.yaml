@@ -44,6 +44,7 @@ requirements:
     - r-knitr
     - r-magrittr
     - imagemagick
+    - librsvg
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -52,6 +53,7 @@ requirements:
     - r-knitr
     - r-magrittr
     - imagemagick
+    - librsvg
 
 test:
   commands:
@@ -73,9 +75,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
