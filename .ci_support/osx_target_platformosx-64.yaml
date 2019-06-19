@@ -1,7 +1,9 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 c_compiler:
-- toolchain_c
+- clang
+c_compiler_version:
+- '4'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -9,7 +11,9 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 cxx_compiler:
-- toolchain_cxx
+- clangxx
+cxx_compiler_version:
+- '4'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
@@ -18,6 +22,6 @@ pin_run_as_build:
   r-base:
     max_pin: x.x.x
 r_base:
-- 3.4.1
+- 3.5.1
 target_platform:
 - osx-64

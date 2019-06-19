@@ -1,5 +1,7 @@
 c_compiler:
-- toolchain_c
+- gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -7,9 +9,11 @@ channel_targets:
 cran_mirror:
 - https://cran.r-project.org
 cxx_compiler:
-- toolchain_cxx
+- gxx
+cxx_compiler_version:
+- '7'
 docker_image:
-- condaforge/linux-anvil
+- condaforge/linux-anvil-comp7
 pin_run_as_build:
   r-base:
     max_pin: x.x.x
