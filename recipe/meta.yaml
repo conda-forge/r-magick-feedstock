@@ -1,4 +1,4 @@
-{% set version = '2.0' %}
+{% set version = "2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/magick_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/magick/magick_{{ version }}.tar.gz
-  sha256: 559cd274b0148e89f66ccbf111a4123f600e67fa7258293a220ed6224631c4a3
+  sha256: ef4fb8fc1c5a9cfcc36b22485a0e17d622f61e55803b1e7423fd15f0550de7df
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   # imagemagick package not available on win
   skip: true  # [win or osx]
   rpaths:
