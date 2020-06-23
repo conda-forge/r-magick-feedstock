@@ -1,4 +1,4 @@
-{% set version = "2.3" %}
+{% set version = "2.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,13 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/magick_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/magick/magick_{{ version }}.tar.gz
-  sha256: a8412512a132a74ed88fbe64a0a415e9ba5437a1b8a664990638e10915274ba0
+  sha256: 5a1ca56b8398a5869ab9cea95c04cb8febd5b5e6ad1eaf8201068237e91237f8
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   # imagemagick package not available on win
   skip: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -59,17 +59,12 @@ test:
 about:
   home: https://docs.ropensci.org/magick (website) https://github.com/ropensci/magick (devel)
   license: MIT
-  summary: 'Bindings to ''ImageMagick'': the most comprehensive open-source image processing
-    library available. Supports many common formats (png, jpeg, tiff, pdf, etc) and
-    manipulations (rotate, scale, crop, trim, flip, blur, etc). All operations are vectorized
-    via the Magick++ STL meaning they operate either on a single frame or a series of
-    frames for working with layers, collages, or animation. In RStudio images are automatically
-    previewed when printed to the console, resulting in an interactive editing environment.
-    The latest  version of the package includes a native graphics device for creating  in-memory
-    graphics or drawing onto images using pixel coordinates.'
+  summary: "Bindings to 'ImageMagick': the most comprehensive open-source image processing library available. Supports many common formats (png, jpeg, tiff, pdf, etc) and manipulations (rotate, scale, crop, trim, flip, blur, etc). All operations are vectorized via the Magick++ STL meaning they operate either on a single\
+    \ frame or a series of frames for working with layers, collages, or animation. In RStudio images are automatically previewed when printed to the console, resulting in an interactive editing environment. The latest  version of the package includes a native graphics device for creating  in-memory graphics or drawing onto\
+    \ images using pixel coordinates."
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
