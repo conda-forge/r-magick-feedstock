@@ -1,4 +1,4 @@
-{% set version = "2.5.1" %}
+{% set version = "2.5.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/magick_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/magick/magick_{{ version }}.tar.gz
-  sha256: 30bdcc2efc17bfa289b5b4c33722b58c1bb1549d5c99af0a397be332b9e3ab3d
+  sha256: bd637d18ff87f9c1975f0f893fd179d5b9b6327558120d015f8baca3bccfdb57
 
 build:
   merge_build_host: true  # [win]
