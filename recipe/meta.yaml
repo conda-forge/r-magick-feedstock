@@ -49,7 +49,7 @@ requirements:
     - r-rcpp >=0.12.12
     - r-curl
     - r-magrittr
-    - {{ pin_compatible('imagemagick', max_pin='x.x') }}
+    - {{ pin_compatible('imagemagick', max_pin='x.x.x') }}
 
 test:
   commands:
