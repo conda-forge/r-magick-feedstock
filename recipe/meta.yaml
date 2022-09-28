@@ -16,7 +16,7 @@ build:
   merge_build_host: true  # [win]
   # imagemagick package not available on win
   skip: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -43,12 +43,14 @@ requirements:
     - r-curl
     - r-magrittr
     - imagemagick
+    - libxml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.12
     - r-curl
     - r-magrittr
+    - libxml2
     - {{ pin_compatible('imagemagick', max_pin='x.x.x') }}
 
 test:
