@@ -3,6 +3,7 @@ About r-magick-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-magick-feedstock/blob/main/LICENSE.txt)
 
+
 About r-magick
 --------------
 
@@ -11,6 +12,7 @@ Home: https://docs.ropensci.org/magick (website) https://github.com/ropensci/mag
 Package license: MIT
 
 Summary: Bindings to 'ImageMagick': the most comprehensive open-source image processing library available. Supports many common formats (png, jpeg, tiff, pdf, etc) and manipulations (rotate, scale, crop, trim, flip, blur, etc). All operations are vectorized via the Magick++ STL meaning they operate either on a single frame or a series of frames for working with layers, collages, or animation. In RStudio images are automatically previewed when printed to the console, resulting in an interactive editing environment. The latest  version of the package includes a native graphics device for creating  in-memory graphics or drawing onto images using pixel coordinates.
+
 About r-magick
 --------------
 
