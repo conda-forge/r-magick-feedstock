@@ -45,12 +45,14 @@ requirements:
     - r-curl
     - r-magrittr
     - imagemagick                  # [not win]
+    - libiconv                     # [win]
   run:
     - r-base
     - r-rcpp >=0.12.12
     - r-curl
     - r-magrittr
     - {{ pin_compatible('imagemagick', max_pin='x.x.x') }}  # [not win]
+    - libiconv                     # [win]
 
 test:
   commands:
