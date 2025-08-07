@@ -1,4 +1,4 @@
-{% set version = "2.8.6" %}
+{% set version = "2.8.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,13 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/magick_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/magick/magick_{{ version }}.tar.gz
-  sha256: 3039beaa5b028d032c1c7206b1d7eac979e7ededf7a63d74b2159649578ad4a5
+  sha256: 355a857e79fe8e6d87ee99f3f731e2823b7c241a316c7063a033de6861b9f206
 
 build:
   number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
