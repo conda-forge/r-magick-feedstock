@@ -1,4 +1,4 @@
-{% set version = "2.8.7" %}
+{% set version = "2.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/magick_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/magick/magick_{{ version }}.tar.gz
-  sha256: 355a857e79fe8e6d87ee99f3f731e2823b7c241a316c7063a033de6861b9f206
+  sha256: 477d717075651d2d508a66c313fd82b5e530b5ba7603b4a6cafa8c8e8cb6dfba
 
 build:
   number: 0
