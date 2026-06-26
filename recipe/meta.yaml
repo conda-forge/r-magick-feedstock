@@ -12,7 +12,7 @@ source:
   sha256: 26ac6072279def657f7fef2875b23cff330dc1ab22a410f10daea56ed425219d
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -55,8 +55,10 @@ requirements:
     - r-rcpp >=0.12.12
     - r-curl
     - r-magrittr
-    - {{ pin_compatible('imagemagick', max_pin='x.x.x') }}  # [not win]
     - libiconv                     # [win]
+    ## NB: imagemagick is not globally pinned and lacks semver
+    ## see https://github.com/conda-forge/r-magick-feedstock/issues/50)
+    - {{ pin_compatible('imagemagick', exact=True) }}  # [not win]
 
 test:
   commands:
